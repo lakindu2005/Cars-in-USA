@@ -1,0 +1,902 @@
+*{
+    font: poppins;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header, footer {
+    text-align: center;
+    padding: 3px;
+    background-color:#000080;
+    color: white;
+    font-family: monospace;
+}
+
+@media (max-width: 768px) {
+    header, footer {
+        padding: 5px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Adjust font size for better readability on mobile */
+    }
+
+    header h3 {
+        font-size: 18px;
+    }
+}
+
+/*getting rid of the dots*/
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 120px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.2);
+    z-index: 3;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .dropdown-content a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:last-child {
+    margin-bottom: 0;
+  }
+  
+  .logo {
+    max-width: 100%; /* Or a specific width */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: opacity .3s; /* Smooth hover effect */
+  }
+  
+  .logo:hover {
+    transform: scale(1.05); /* Subtle lift effect */
+}
+
+
+  
+h1 {
+    display: block;
+    font-size: 44px;
+    margin-block-start: 0.47em;
+    margin-block-end: 0.47em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;  
+    font-family: monospace;
+    font-stretch: wider; 
+}
+
+body{
+    background-image: url('images/Denver-Skyline-Wallpaper-(Mural).jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;  
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.5;
+    justify-content: center;
+
+    /* Text outline effect */
+    text-shadow: 
+        -2px -2px 2px black,  
+        2px -2px 2px black,
+        -2px 2px 2px black,
+        2px 2px 2px black;
+}
+
+p{
+    line-height: 1.5;
+}
+
+/*==Navigation==========================*/
+.navigation{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    max-width: 1250px;
+    width: 100%;
+    margin: auto;
+}
+
+.menu{
+    display:flex;
+}
+
+p{
+    line-height: 1.5;
+}
+
+.logo img{
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.menu li a{
+    font-family: monospace;
+    padding: 0px 30px;
+    margin: 0px 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    transition: all ease 0.3s;
+    display: block;
+}
+
+.menu li a:hover{
+    color: gold;
+    transition: all ease 0.3s;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 1024px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* Slide Container */
+.slider-container {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+    overflow: hidden; /* Prevents overflow issues */
+}
+
+/* Slide Frame */
+.slider-frame {
+    overflow: hidden;
+    width: 1200px;
+    height: 800px;
+    position: relative;
+}
+
+/* Slide Images - FIX: position absolute for left movement */
+.slide-images {
+    display: flex; /* Ensures images are in a row */
+    width: 3600px; /* 3 images * 1200px */
+    height: 800px;
+    position: absolute; /* FIX: Allows left movement */
+    left: 0;
+    transition: left 0.5s ease-in-out; /* Smooth transition for JS */
+}
+
+/* Individual Image Containers */
+.img-container {
+    height: 800px;
+    width: 1200px;
+    flex-shrink: 0; /* Prevents resizing */
+}
+
+/* Images */
+.slider-frame img {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+}
+
+/* Buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+
+
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* DISABLE AUTOMATIC SLIDING - JavaScript will handle this */
+@keyframes slide_animation {
+    /* Removed automatic movement */
+}
+
+.slide-images {
+    animation: none !important; /* Disables conflicting CSS animation */
+}
+
+/*-----Slide styling ends here-----*/
+
+
+
+
+
+/*3 product page links in the home page starts here*/
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: grey;
+    color: white;
+    width: 350px;
+    margin: 10px;
+    border-radius: 15px;
+
+    /* Text outline effect */
+    text-shadow: 
+        -2px -2px 2px black,  
+        2px -2px 2px black,
+        -2px 2px 2px black,
+        2px 2px 2px black;
+}
+
+.card-image {
+    height: 255px;
+    width: 100%; /* Ensure it spans the full width of the card */
+    margin-bottom: 15px;
+    background-size: 100% 100%; /* Stretch the image to fit both width and height */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 15px 15px 0 0;
+}
+
+.ford{
+    background-image: url(images/Ford-brand-logo.jpg)
+}
+
+.chevrolet{
+    background-image: url(images/CHEVROLET-brand-logo.jpg)
+}
+
+.dodge{
+    background-image: url(images/DODGE-brand-logo.png)
+}
+
+.offers ul {
+    list-style-type: disc; /* Use bullet points for the list */
+    padding-left: 70px; /* Add left padding to the list */
+    margin-top: 10px; /* Add margin on top of the list */
+    margin-bottom: 27.5px; /* Add margin on top of the list */
+    text-align: left;
+}
+
+.offers li {
+    padding: 5px 0; /* Padding between list items */ 
+}
+
+.card h2 {
+    padding: 10px;
+    
+}
+
+.card p{
+    padding: 10px;
+}
+
+.card a{
+    background-color:#000000;
+    color:#ffffff;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: rgb(58, 58, 58);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.5s ease;
+
+    /* Text outline effect */
+    text-shadow: 
+        -2px -2px 2px black,  
+        2px -2px 2px black,
+        -2px 2px 2px black,
+        2px 2px 2px black;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content th,
+.content td {
+  padding: 8px; /* Add padding to cells */
+  border: 1px solid #ddd; /* Add border to cells */
+}
+
+.content th {
+    text-align: center;
+}
+/*3 product page links in the home page ends*/
+
+
+
+
+/*About Us mobile responsive*/
+@media (max-width: 768px) {
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flex-container div {
+        margin: 10px;
+    }
+
+    .flex-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    table {
+        width: 100%;
+        overflow-x:auto;
+    }
+
+    table td {
+        padding: 10px;
+        vertical-align: top; /* Align content to the top */
+    }
+
+    .content iframe, .content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content table {
+        display: block; /* Change the display of tables to block */
+    }
+
+    .content table th{
+        font-size: 10px;
+    }
+
+    .content table tr {
+        display: block; /* Change the display of table rows to block */
+        margin-bottom: 20px; /* Add some space between table rows */
+    }
+
+    .content table tr td {
+        display: block; /* Change the display of table cells to block */
+    }
+}
+/*About Us mobile responsive ends*/
+
+/*-----Two flags in About Us page styling starts-----*/
+.flag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flag {
+    margin: 0 33px;
+  }
+
+  /* Make flags stack vertically on small screens */
+  @media (max-width: 768px) {
+    .flags-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .flags-container img {
+        height: auto;
+        width: 90%; /* Adjust image width for mobile screens */
+        max-width: 400px;
+    }
+}
+/*-----Two flags in About Us page styling ends-----*/
+
+
+
+/*--------Instagram like post--------*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.grid-item {
+    background: black;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 400px;
+}
+
+.gallery {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+    background-color:#4d4d4d; 
+}
+
+.gallery-item.visible {
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.gallery-info {
+    padding: 10px;
+    padding-left: 20px;
+    text-align: left;
+    background: black;
+    
+}
+
+
+@media (max-width: 768px) {
+    .gallery-info {
+        background-color: black; /* Also makes the info background black on mobile */
+    }
+
+    .gallery-container {
+        align-items: center; /* Centers vertically */
+    }
+
+    .grid-item {
+        background-color:#4d4d4d; 
+    }
+}
+/*----------Instagram like post ends here-------------*/
+
+
+
+
+/*Styling for all product pages starts here*/
+.venue {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styling for each venue */
+.venue {
+    width: 260px;
+    margin: 30px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Styling for venue images */
+.venue img {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+/* Styling for venue titles */
+.venue h2 {
+    margin-top: 10px; /* Add margin to separate title from image */
+    font-size: 18px; /* Set font size for the venue title */
+}
+
+/* Styling for venue prices */
+.venue h4 {
+    margin-top: 10px; /* Add margin to separate price from title */
+    font-size: 16px; /* Set font size for the venue price */
+}
+/*Styling for all product pages ends here*/
+
+
+  /* Link to the order page */
+.order-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
+form{
+background:#4d4d4d;
+width: 500px;
+text-align: left;
+padding: 3%;
+}
+
+
+/*Home page ends*/
+
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+    .content {
+        width: 90%; /* Reduce width to 90% of the viewport width for smaller screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .content {
+        width: 100%; /* Make the width 100% for even smaller screens */
+        padding: 0 20px; /* Add some padding for better spacing */
+    }
+}
+
+
+
+
+
+
+/*About Us-table for services*/
+/* Apply basic styles to the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Apply styles to table header */
+  th {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Apply styles to table data cells */
+  td {
+    padding: 8px;
+    border-bottom: 1px solid #4d4d4d;
+  }
+
+
+  /* Apply styles to table footer data cell */
+  tfoot td {
+    padding: 8px;
+    text-align: center;
+  }
+
+ 
+
+content{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Media query for screens smaller than 800px */
+@media (max-width: 800px) {
+    .navigation {
+        flex-direction: column; /* Change navigation direction to column */
+        align-items: stretch; /* Stretch items to full width */
+    }
+    
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+    
+    .menu li {
+        margin: 5px 0; /* Adjust margin between menu items */
+    }
+    
+    .menu li a {
+        padding: 10px; /* Adjust padding for better touch interaction */
+    }
+    
+    .right-nav {
+        grid-template-columns: 1fr; /* Change right nav items to stack vertically */
+    }
+    
+    .search-box {
+        width: 100%; /* Make search box full width */
+    }
+    
+    .flex-container {
+        flex-direction: column; /* Adjust flex container direction */
+    }
+    
+    .container {
+        width: 100%;  /* Make container full width */
+    }
+    
+    .text-block {
+        width:fit-content;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .container .content{
+        width: 100%
+    }
+    
+    .centered{
+        width: 100%;
+    }
+    
+    .venue{
+        width: 100%;
+    }
+
+    .venue img {
+        width: 100%;
+        height: 150px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        width: 100%;
+        height: 150px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0px;
+    }
+
+    .item{
+        width: 100%;
+    }
+
+    .item img {
+        width: 100%;
+        height: 150px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0px;
+    }
+
+
+
+    #productTable,
+  #productTable tbody,
+  #productTable tr,
+  #productTable td {
+    display: block;
+    width: 100%;
+  }
+    
+    
+}
+
+
+
+
+@media (max-width: 768px) {
+    header, footer {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    header h3 {
+        font-size: 18px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu li a {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .venue {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .menu li a {
+        font-size: 18px;
+    }
+
+}
+
+
+/* Mobile Responsive Design */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .slider-container {
+        width: 90%; /* Adjust width */
+        height: 600px; /* Reduce height */
+    }
+
+    .slider-frame {
+        width: 100%;
+        height: 600px;
+    }
+
+    .slide-images {
+        width: 300%;
+        height: 600px;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 600px;
+    }
+
+    .slider-frame img {
+        max-width: 80%; 
+        max-height: 80%;
+    }
+}
+
+/* Regular Phones (481px - 767px) */
+@media (max-width: 767px) {
+    .slider-container {
+        width: 95%;
+        height: 400px;
+    }
+
+    .slider-frame {
+        width: 100%;
+        height: 400px;
+    }
+
+    .slide-images {
+        width: 300%;
+        height: 400px;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .slider-frame img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .prev-btn, .next-btn {
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+}
+
+/* Small Phones (Up to 480px) */
+@media (max-width: 480px) {
+    .slider-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .slider-frame {
+        width: 100%;
+        height: 300px;
+    }
+
+    .slide-images {
+        width: 300%;
+        height: 300px;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .slider-frame img {
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    .prev-btn, .next-btn {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}

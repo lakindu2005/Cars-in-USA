@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars in USA</title>
+
+    <!--==Stylesheet=========-->
+    <link rel="stylesheet" type="text/css" href="styles.css">    
+
+    <!--==USA-gif===========-->
+    <link rel="shortcut icon" href="images/Cars in USA.jpg"/>
+
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+                
+            <!---logo-->
+            <a href="index.html"  class="logo"> 
+                <div class="flex-container">
+                    <img src="images/USA flag gif.gif" alt="USA flag gif" class="hello">
+                    <img src="images/Cars in USA.jpg" alt="CARS OF AMERICA" class="hello">
+                </div>
+                
+            <!--menu------>
+            <nav class="navigation">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li class="dropdown">
+                <a href="#">Brands</a>
+                <div class="dropdown-content">
+                    <a href="ford.html"><img src="images/Ford-Logo.png" alt="Ford Logo" class="logo"></a>
+                    <br>
+                    <a href="chevrolet.html"><img src="images/Chevrolet-Logo.png" alt="Chevrolet Logo" class="logo"></a>
+                    <br>
+                    <a href="dodge.html"><img src="images/Dodge-Logo.png" alt="Dodge Logo" class="logo"></a>
+                    </div>
+                </li>
+                </ul>
+            </nav>
+    </header>
+
+    <br>
+    
+    <div class="content">
+        <img src="images/Chevrolet-Logo.png" alt="Chevrolet Logo" width="700px" height="auto">
+    </div>
+
+        <br>
+
+        <div class="grid-container">
+                    
+            <div class="grid-item">
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <img src="images/Chevrolet Lumina 1st gen (Pic1).jpg" class="gallery-item visible">
+                        <img src="images/Chevrolet Lumina 1st gen (Pic2).jpg" class="gallery-item">
+                    </div>
+                    <button class="prev-btn" onclick="navigateGallery(this, -1)">&#10094;</button>
+                    <button class="next-btn" onclick="navigateGallery(this, 1)">&#10095;</button>
+                </div>
+                <div class="gallery-info">
+                    <p>Chevrolet Lumina 1st gen</p>
+                    <li>3.4L V6</li>
+                    <li>FWD</li>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <img src="images/Chevrolet Caprice 2nd gen (Pic2).jpg" class="gallery-item visible">
+                        <img src="images/Chevrolet Caprice 2nd gen (Pic9).jpg" class="gallery-item">
+                    </div>
+                    <button class="prev-btn" onclick="navigateGallery(this, -1)">&#10094;</button>
+                    <button class="next-btn" onclick="navigateGallery(this, 1)">&#10095;</button>
+                </div>
+                <div class="gallery-info">
+                    <p>Chevrolet Caprice 2nd gen</p>
+                    <li>4.3L V8</li>
+                    <li>RWD</li>
+                </div>
+            </div>
+        
+            <div class="grid-item">
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <img src="images/Chevrolet Malibu 6th gen (Pic1).jpg" class="gallery-item visible">
+                        <img src="images/Chevrolet Malibu 6th gen (Pic2).jpg" class="gallery-item">
+                    </div>
+                    <button class="prev-btn" onclick="navigateGallery(this, -1)">&#10094;</button>
+                    <button class="next-btn" onclick="navigateGallery(this, 1)">&#10095;</button>
+                </div>
+                <div class="gallery-info">
+                    <p>Chevrolet Malibu 6th gen</p>
+                    <li>3.5L V6</li>
+                    <li>FWD</li>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <script src="instapost.js"></script>
+</body>
+
+<footer>
+    <br>
+    <br>
+    <h2>Get to Know Us</h2>
+    <br>
+    <p>
+        Cars in USA<br>
+        No:3479, Denver, Denver County, Colorado, USA<br>
+        Mobile: +1 (720) 999-9999<br>
+        info@carsinusa.com
+    </p> 
+    <br>
+    <br>   
+</footer>
+
+</html>
