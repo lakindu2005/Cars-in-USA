@@ -6,4 +6,5 @@ function navigateGallery(button, direction) {
     images[currentIndex].classList.remove("visible");
     let newIndex = (currentIndex + direction + images.length) % images.length;
     images[newIndex].classList.add("visible");
+
 }
